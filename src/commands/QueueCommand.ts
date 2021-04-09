@@ -5,10 +5,10 @@ import { isMusicPlaying } from "../utils/decorators/MusicHelper";
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["q"],
-    name: "queue",
-    description: "Show the current queue",
-    usage: "{prefix}queue"
+    aliases: ["a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class QueueCommand extends BaseCommand {
     @isMusicPlaying()
