@@ -5,10 +5,10 @@ import { isUserInTheVoiceChannel, isMusicPlaying, isSameVoiceChannel } from "../
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["vol"],
-    name: "volume",
-    description: "Show or change the music player's volume",
-    usage: "{prefix}volume [new volume]"
+    aliases: ["a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class VolumeCommand extends BaseCommand {
     @isUserInTheVoiceChannel()
