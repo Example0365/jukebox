@@ -5,9 +5,9 @@ import { createEmbed } from "../utils/createEmbed";
 import { disableInviteCmd } from "../config";
 
 @DefineCommand({
-    name: "link",
-    description: "Send the bot's link and owner info",
-    usage: "{prefix}link",
+    name: "website",
+    description: "Send the bot's website.",
+    usage: "{prefix}website",
     disable: disableInviteCmd
 })
 export class InviteCommand extends BaseCommand {
@@ -15,15 +15,9 @@ export class InviteCommand extends BaseCommand {
         message.channel.send(
             createEmbed("info")
                 .setTimestamp()
-                .setTitle(`Jingexz01's Social Accounts`)
-                .setFooter(`Command Link Was Requested/\Executed By: ${message.author.tag}`, message.author.displayAvatarURL())
-                .addField("Discord Support Server", `[Click here](https://discord.gg/DBHxxT7)`)
-                .addField("Jingexz01's Youtube Account", `[Subscribe And Check Out My Youtube Channel!](https://youtube.com/jingexz01)`)
-                .addField("Jingexz01's Website", `[Open Here](https://jingexz01.cf)`)
-                .addField("Jingexz01's Twitter", `[Follow Me](https://twitter.com/jingexz01)`)
-                .addField("Jingexz01's Instagram", `[Follow Me On Instagram](https://instagram.com/jingexz01)`)
-                .addField("Jingexz01's Facebook Page", `[Follow And Like My Facebook Page](https://facebook.com/jingexz01)`)
-                .addField("Discord Bot Invite Link", `[Click here](${await this.client.generateInvite({ permissions: 53857345 })})`)
+                .setTitle(`PlayEX Discord Bot Website.`)
+                .setFooter(`Command Website Was Requested/\Executed By: ${message.author.tag}`, message.author.displayAvatarURL())
+                .addField("PlayEX Discord Bot Website", `[Click here](https://example0365.000webhostapp.com/)`)
                 .setColor("#000000")
         ).catch(e => this.client.logger.error("PLAY_CMD_ERR:", e));
     }
