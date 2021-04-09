@@ -5,10 +5,10 @@ import { isMusicPlaying } from "../utils/decorators/MusicHelper";
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["np", "now-playing"],
-    name: "nowplaying",
-    description: "Send info about the current music player",
-    usage: "{prefix}nowplaying"
+    aliases: ["a", "a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class NowPlayingCommand extends BaseCommand {
     @isMusicPlaying()
