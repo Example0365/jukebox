@@ -5,10 +5,10 @@ import { isUserInTheVoiceChannel, isMusicPlaying, isSameVoiceChannel } from "../
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["st", "dc", "disconnect"],
-    name: "stop",
-    description: "Stop the current queue/\playlist.",
-    usage: "{prefix}stop"
+    aliases: ["a", "a", "a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class StopCommand extends BaseCommand {
     @isUserInTheVoiceChannel()
