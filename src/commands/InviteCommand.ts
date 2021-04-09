@@ -5,8 +5,9 @@ import { createEmbed } from "../utils/createEmbed";
 import { disableInviteCmd } from "../config";
 
 @DefineCommand({
+    aliases: ["web", "link"],
     name: "website",
-    description: "Send the bot's website.",
+    description: "Send the bot's website that contains its info and commands.",
     usage: "{prefix}website",
     disable: disableInviteCmd
 })
