@@ -5,10 +5,10 @@ import { isUserInTheVoiceChannel, isMusicPlaying, isSameVoiceChannel } from "../
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["s"],
-    name: "skip",
-    description: "Skip the current music",
-    usage: "{prefix}skip"
+    aliases: ["a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class SkipCommand extends BaseCommand {
     @isUserInTheVoiceChannel()
