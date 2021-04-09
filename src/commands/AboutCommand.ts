@@ -8,10 +8,10 @@ import { DefineCommand } from "../utils/decorators/DefineCommand";
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["botinfo", "info", "stats"],
-    name: "about",
-    description: "Send the bot's info/stats",
-    usage: "{prefix}about"
+    aliases: ["a", "a", "a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class AboutCommand extends BaseCommand {
     public async execute(message: IMessage): Promise<void> {
