@@ -5,9 +5,9 @@ import { isUserInTheVoiceChannel, isMusicPlaying, isSameVoiceChannel } from "../
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    name: "resume",
-    description: "Resume the music player",
-    usage: "{prefix}resume"
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class ResumeCommand extends BaseCommand {
     @isUserInTheVoiceChannel()
