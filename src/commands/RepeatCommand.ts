@@ -6,10 +6,10 @@ import { isUserInTheVoiceChannel, isMusicPlaying, isSameVoiceChannel } from "../
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["loop", "music-loop", "music-repeat"],
-    name: "repeat",
-    description: "Repeat current music or the queue",
-    usage: "{prefix}repeat [all | one | disable]"
+    aliases: ["a", "a", "a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class RepeatCommand extends BaseCommand {
     @isUserInTheVoiceChannel()
