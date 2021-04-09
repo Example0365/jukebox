@@ -4,10 +4,10 @@ import { IMessage } from "../../typings";
 import { DefineCommand } from "../utils/decorators/DefineCommand";
 
 @DefineCommand({
-    aliases: ["pong", "peng", "pingpong"],
-    name: "ping",
-    description: "Shows the current ping of the bot",
-    usage: "{prefix}ping"
+    aliases: ["a", "a", "a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class PingCommand extends BaseCommand {
     public execute(message: IMessage): IMessage {
