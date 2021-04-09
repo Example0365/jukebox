@@ -10,10 +10,10 @@ import { createEmbed } from "../utils/createEmbed";
 import { Video } from "../utils/YouTube/structures/Video";
 
 @DefineCommand({
-    aliases: ["play-music", "add", "p"],
-    name: "play",
-    description: "Play music directly from youtube.",
-    usage: "{prefix}play \{youtube video, playlist link, or youtube music / yt video name\}"
+    aliases: ["a", "a", "a"],
+    name: "a",
+    description: "a",
+    usage: "{prefix}a"
 })
 export class PlayCommand extends BaseCommand {
     @isUserInTheVoiceChannel()
