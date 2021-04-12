@@ -17,7 +17,7 @@ export class InviteCommand extends BaseCommand {
             createEmbed("info")
                 .setTimestamp()
                 .setTitle(`PlayEX Discord Bot Website`)
-                .setFooter(`Command Website Was Requested/\Executed By: ${message.author.tag}`, message.author.displayAvatarURL())
+                .setFooter(`Command Website/\Link Was Requested/\Executed By: ${message.author.tag}`, message.author.displayAvatarURL())
                 .addField("PlayEX Discord Bot Website Link", `[Click here to open the website](https://example0365.000webhostapp.com/)`)
                 .setColor("#000000")
         ).catch(e => this.client.logger.error("PLAY_CMD_ERR:", e));
