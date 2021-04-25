@@ -20,7 +20,7 @@ export class AboutCommand extends BaseCommand {
             createEmbed("info", `
 \`\`\`asciidoc
 System Memory Used         :: ${this.bytesToSize(await this.client.getTotalMemory("rss"))}
-Current Players Playing    :: ${await this.client.getTotalPlaying()} Player
+Current Players Playing    :: ${await this.client.getTotalPlaying()} Player(\s\)
 Game Process Uptime        :: ${formatMS(process.uptime() * 1000)}
 Game Uptime                :: ${formatMS(this.client.uptime!)}
 System Platform            :: ${process.platform}
