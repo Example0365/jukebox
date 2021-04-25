@@ -20,11 +20,11 @@ export class AboutCommand extends BaseCommand {
             createEmbed("info", `
 \`\`\`asciidoc
 System Memory Used         :: ${this.bytesToSize(await this.client.getTotalMemory("rss"))}
-Current Players Playing    :: ${await this.client.getTotalPlaying()} Player(\s)\
+Current Players Playing    :: ${await this.client.getTotalPlaying()} Player
 Game Process Uptime        :: ${formatMS(process.uptime() * 1000)}
 Game Uptime                :: ${formatMS(this.client.uptime!)}
 System Platform            :: ${process.platform}
-Architecture               :: ${process.arch} (\Linux System)\
+Architecture               :: ${process.arch} (\Linux System\)
 Operating System Uptime    :: ${formatMS(osUptime() * 1000)}
 Discord Server Count       :: ${await this.client.getGuildsCount()} Bot Joined Servers
 \`\`\`
