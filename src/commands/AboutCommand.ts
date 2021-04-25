@@ -8,10 +8,10 @@ import { DefineCommand } from "../utils/decorators/DefineCommand";
 import { createEmbed } from "../utils/createEmbed";
 
 @DefineCommand({
-    aliases: ["a", "a", "a"],
-    name: "a",
-    description: "a",
-    usage: "{prefix}a"
+    aliases: ["gamestatus", "gs", "game"],
+    name: "Game Status",
+    description: "Jing Private Server Status",
+    usage: "{prefix}gamestats"
 })
 export class AboutCommand extends BaseCommand {
     public async execute(message: IMessage): Promise<void> {
@@ -19,37 +19,21 @@ export class AboutCommand extends BaseCommand {
         message.channel.send(
             createEmbed("info", `
 \`\`\`asciidoc
-Cached users count  :: ${await this.client.getUsersCount()}
-Channels count      :: ${await this.client.getChannelsCount()}
-Guilds/\Server count :: ${await this.client.getGuildsCount()}
-Shards count        :: ${this.client.shard ? `${this.client.shard.count}` : "N/A"}
-Shard ID            :: ${this.client.shard ? `${this.client.shard.ids[0]}` : "N/A"}
-Playing Music on    :: ${await this.client.getTotalPlaying()} guilds
-YT Data Strategy    :: ${await this.client.config.YouTubeDataRetrievingStrategy === "api" ? "REST API" : "HTML SCRAPING"}
-
-System Platform     :: ${process.platform}
-Architecture        :: ${process.arch}
-OS Uptime           :: ${formatMS(osUptime() * 1000)}
-Memory              :: ${this.bytesToSize(await this.client.getTotalMemory("rss"))}
-Process Uptime      :: ${formatMS(process.uptime() * 1000)}
-Bot System Uptime   :: ${formatMS(this.client.uptime!)}
-
-Node.js version     :: ${process.version}
-Discord.js version  :: v${version}
-FFMPEG version      :: v${(await import(this.getPackageJSON("ffmpeg-static")))["ffmpeg-static"]["binary-release-name"]}
-YTDL-Core version   :: v${(await import(this.getPackageJSON("ytdl-core"))).version}
-Opus Encoder        :: ${opusEncoderName} v${(await import(this.getPackageJSON(opusEncoderName))).version}
-Bot System Version  :: v${(await import(path.resolve(process.cwd(), "package.json"))).version}
-Bot Owned And Coded By :: Jingexz01✔#2841
-
-Source code         :: https://github.com/Jingexz01/jukebox
+System Memory Used         :: ${this.bytesToSize(await this.client.getTotalMemory("rss"))}
+Current Players Playing    :: ${await this.client.getTotalPlaying()} Player(\s)\
+Game Process Uptime        :: ${formatMS(process.uptime() * 1000)}
+Game Uptime                :: ${formatMS(this.client.uptime!)}
+System Platform            :: ${process.platform}
+Architecture               :: ${process.arch} (\Linux System)\
+Operating System Uptime    :: ${formatMS(osUptime() * 1000)}
+Discord Server Count       :: ${await this.client.getGuildsCount()} Bot Joined Servers
 \`\`\`
         `)
-                .setFooter(`Command About Was Requested/\Executed By: ${message.author.tag}`, message.author.displayAvatarURL())
+                .setFooter(`Command GameStats Was Requested/\Executed By: ${message.author.tag}`, message.author.displayAvatarURL())
                 .setTimestamp()
-                .addField("Use >link for Jingexz01\'s Social Accounts.", "For Bot And Any Other Updates Check #\📣announcements on Jingexz01\'s Server")
-                .addField("Discord Support Server/\Jingexz01\'s Server", `[Click here](https://discord.gg/DBHxxT7)`)
-                .setAuthor(`${this.client.user?.username as string} - Just a simple Discord music bot. - About Command.`)
+                .addField("Game Stats", "For Private Server Game And Any Other Updates Check #\📣announcements on Jingexz01\'s Server")
+                .addField("Jing Private Server/\Jingexz01\'s Server", `[Click here](https://discord.gg/DBHxxT7)`)
+                .setAuthor(`Jing Private Server - Game Status | Status : Online!`)
         ).catch(e => this.client.logger.error("ABOUT_CMD_ERR:", e));
     }
 
